@@ -2,11 +2,11 @@
 # Vivado v2018.2.1 (64-bit)
 # SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
 # IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
-# Start of session at: Thu Nov 15 14:52:26 2018
-# Process ID: 7076
-# Current directory: C:/Users/tdale19/Desktop/LSTMsingle/LSTMsingle.runs/synth_1
-# Command line: vivado.exe -log LSTMtop.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source LSTMtop.tcl
-# Log file: C:/Users/tdale19/Desktop/LSTMsingle/LSTMsingle.runs/synth_1/LSTMtop.vds
-# Journal file: C:/Users/tdale19/Desktop/LSTMsingle/LSTMsingle.runs/synth_1\vivado.jou
+# Start of session at: Fri Nov 16 12:01:39 2018
+# Process ID: 9764
+# Current directory: C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.runs/synth_1
+# Command line: vivado.exe -log LSTMtester.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source LSTMtester.tcl
+# Log file: C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.runs/synth_1/LSTMtester.vds
+# Journal file: C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source LSTMtop.tcl -notrace
+source LSTMtester.tcl -notrace

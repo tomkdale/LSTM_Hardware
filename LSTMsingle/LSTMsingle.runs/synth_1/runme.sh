@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/tdale19/Desktop/LSTMsingle/LSTMsingle.runs/synth_1'
+HD_PWD='C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log LSTMtop.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source LSTMtop.tcl
+EAStep vivado -log LSTMtester.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source LSTMtester.tcl

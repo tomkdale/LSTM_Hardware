@@ -1,0 +1,1 @@
+-wto "0123f96619644022a37e6a9851bfcc02" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "LSTMtester_behav" "xil_defaultlib.LSTMtester" -log "elaborate.log" 
