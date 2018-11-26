@@ -5,7 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity elementProcessorSig is
     generic( widthV: integer; widthM: integer );
-    Port (clk:in STD_LOGIC;
+    Port (
     weightX: in STD_LOGIC_VECTOR(widthV downto 0);
     weightH: in STD_LOGIC_VECTOR(widthV downto 0);
     oldH:   in STD_LOGIC_VECTOR(widthM downto 0);
@@ -41,6 +41,6 @@ begin
     multH:  vectMatMult generic map(widthV,widthM) port map(vect => weightH, mat => oldH, output => hWeighted);
     
     add:   addMat generic map(widthM) port map(a=>xWeighted, b=> hWeighted, output=> added);
-    tanh: sigGate generic map(widthM) port map(input => added, output=> output);
+    sigmoid: sigGate generic map(widthM) port map(input => added, output=> output);
 
 end Behavioral;

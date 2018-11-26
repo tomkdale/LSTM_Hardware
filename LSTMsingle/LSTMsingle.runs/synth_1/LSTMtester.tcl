@@ -17,23 +17,30 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_msg_config -id {HDL 9-1061} -limit 100000
+set_msg_config -id {HDL 9-1654} -limit 100000
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.cache/wt [current_project]
-set_property parent.project_path C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/tdale19/Documents/GitHub/LSTM_Hardware/LSTMsingle/LSTMsingle.cache/wt [current_project]
+set_property parent.project_path C:/Users/tdale19/Documents/GitHub/LSTM_Hardware/LSTMsingle/LSTMsingle.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
-set_property ip_output_repo c:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.cache/ip [current_project]
+set_property ip_output_repo c:/Users/tdale19/Documents/GitHub/LSTM_Hardware/LSTMsingle/LSTMsingle.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd
-  C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessor.vhd
-  C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/flipFlop.vhd
-  C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtester.vhd
+  C:/Users/tdale19/Documents/GitHub/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd
+  C:/Users/tdale19/Documents/GitHub/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/addMat.vhd
+  C:/Users/tdale19/Documents/GitHub/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd
+  C:/Users/tdale19/Documents/GitHub/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorTanh.vhd
+  C:/Users/tdale19/Documents/GitHub/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/matMatMult.vhd
+  C:/Users/tdale19/Documents/GitHub/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/sigGate.vhd
+  C:/Users/tdale19/Documents/GitHub/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/tanhGate.vhd
+  C:/Users/tdale19/Documents/GitHub/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/vectMatMult.vhd
+  C:/Users/tdale19/Documents/GitHub/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtester.vhd
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -43,9 +50,6 @@ read_vhdl -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/tdale19/Desktop/Nexys4DDR_Master.xdc
-set_property used_in_implementation false [get_files C:/Users/tdale19/Desktop/Nexys4DDR_Master.xdc]
-
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]
 
