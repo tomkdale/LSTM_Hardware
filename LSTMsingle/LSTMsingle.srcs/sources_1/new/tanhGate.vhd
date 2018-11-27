@@ -12,6 +12,6 @@ end tanhGate;
 architecture Behavioral of tanhGate is
 
 begin
-
+    output <= input;
 
 end Behavioral;

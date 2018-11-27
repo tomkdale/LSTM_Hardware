@@ -16,6 +16,6 @@ end vectMatMult;
 architecture Behavioral of vectMatMult is
 
 begin
-
-
+    output(widthV downto 0) <= vect(widthV downto 0) AND mat(widthV downto 0);
+    output(widthM downto widthV + 1) <= mat(widthM downto widthV + 1);
 end Behavioral;

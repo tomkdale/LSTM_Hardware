@@ -6,8 +6,8 @@ use IEEE.NUMERIC_STD.all;
 entity flipFlop is -- flip-flop with synchronous reset
   generic(width: integer);
   port(clk: in  STD_LOGIC;
-       d:          in  STD_LOGIC_VECTOR((width-1) downto 0);
-       q:          out STD_LOGIC_VECTOR((width-1) downto 0));
+       d:          in  STD_LOGIC_VECTOR(width downto 0);
+       q:          out STD_LOGIC_VECTOR(width downto 0));
 end;
 
 architecture asynchronous of flipFlop is

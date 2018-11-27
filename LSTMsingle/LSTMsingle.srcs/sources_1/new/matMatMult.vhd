@@ -1,43 +1,20 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 11/26/2018 11:24:53 AM
--- Design Name: 
--- Module Name: matMatMult - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
 
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
 entity matMatMult is
---  Port ( );
+   generic(widthM: integer);
+   port(
+       mat1:    in STD_LOGIC_VECTOR(widthM downto 0);
+       mat2:     in STD_LOGIC_VECTOR(widthM downto 0);
+       output:  out STD_LOGIC_VECTOR(widthM downto 0)
+       );
 end matMatMult;
 
 architecture Behavioral of matMatMult is
 
 begin
-
+    output(widthM downto 0) <=  mat1(widthM downto 0) AND mat2(widthM downto 0);
 
 end Behavioral;

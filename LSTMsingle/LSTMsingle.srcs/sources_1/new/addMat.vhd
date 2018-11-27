@@ -15,9 +15,7 @@ entity addMat is
 architecture Behavioral of addMat is
 
 begin
---single values are 16 bit Q8.8 values, so for each 16 bits in width add with the other
---    for i in 0 to (widthM/16) loop
---        output(
-
+    
+    output(widthM downto 0) <=  a(widthM downto 0) AND b(widthM downto 0);
 
 end Behavioral;

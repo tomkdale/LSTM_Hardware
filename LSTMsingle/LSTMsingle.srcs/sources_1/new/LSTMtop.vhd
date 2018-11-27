@@ -36,8 +36,8 @@ architecture Behavioral of LSTMtop is
     end component;
     component flipFlop is generic(width: integer);
         port(clk:   in STD_LOGIC;
-              d:          in  STD_LOGIC_VECTOR((width-1) downto 0);
-              q:          out STD_LOGIC_VECTOR((width-1) downto 0)
+              d:          in  STD_LOGIC_VECTOR(width downto 0);
+              q:          out STD_LOGIC_VECTOR(width downto 0)
               );
     end component;
     component addMat generic(widthM: integer);

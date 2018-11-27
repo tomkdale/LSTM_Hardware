@@ -1,0 +1,16 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity LSTMtop
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/addMat.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity addMat
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity elementProcessorSig
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorTanh.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity elementProcessorTanh
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/matMatMult.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity matMatMult
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/sigGate.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sigGate
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/tanhGate.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tanhGate
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/vectMatMult.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity vectMatMult

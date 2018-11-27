@@ -2,10 +2,10 @@
 # Vivado v2018.2.1 (64-bit)
 # SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
 # IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
-# Start of session at: Tue Nov 27 11:06:56 2018
-# Process ID: 1756
+# Start of session at: Mon Nov 26 21:10:00 2018
+# Process ID: 9896
 # Current directory: C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9448 C:\Users\tdale19\Desktop\LSTM_Hardware\LSTMpipelined\LSTMpipelined.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10908 C:\Users\tdale19\Desktop\LSTM_Hardware\LSTMpipelined\LSTMpipelined.xpr
 # Log file: C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/vivado.log
 # Journal file: C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined\vivado.jou
 #-----------------------------------------------------------
@@ -14,8 +14,3 @@ open_project C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
-synth_design -rtl -name rtl_1
-synth_design -rtl -name rtl_1
-synth_design -rtl -name rtl_1
-close_design
-close_project

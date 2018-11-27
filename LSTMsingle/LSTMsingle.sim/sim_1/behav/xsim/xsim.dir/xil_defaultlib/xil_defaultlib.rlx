@@ -3,6 +3,12 @@
 Jul 26 2018
 19:36:16
 C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtester.vhd,1542397133,vhdl,,,,lstmtester,,,,,,,,
-C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd,1542398855,vhdl,,,,lstmtop,,,,,,,,
-C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessor.vhd,1542398930,vhdl,,,,elementprocessor,,,,,,,,
+C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd,1543348135,vhdl,,,,lstmtop,,,,,,,,
+C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/addMat.vhd,1543347499,vhdl,,,,addmat,,,,,,,,
+C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd,1543275557,vhdl,,,,elementprocessorsig,,,,,,,,
+C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorTanh.vhd,1543275557,vhdl,,,,elementprocessortanh,,,,,,,,
 C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/flipFlop.vhd,1542396845,vhdl,,,,flipflop,,,,,,,,
+C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/matMatMult.vhd,1543347470,vhdl,,,,matmatmult,,,,,,,,
+C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/sigGate.vhd,1543275557,vhdl,,,,siggate,,,,,,,,
+C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/tanhGate.vhd,1543275557,vhdl,,,,tanhgate,,,,,,,,
+C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/vectMatMult.vhd,1543347593,vhdl,,,,vectmatmult,,,,,,,,

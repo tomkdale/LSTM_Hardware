@@ -14,6 +14,6 @@ end sigGate;
 architecture Behavioral of sigGate is
 
 begin
-
+    output <= input;
 
 end Behavioral;
