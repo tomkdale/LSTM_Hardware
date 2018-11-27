@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.1 (64-bit)
+# SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
+# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+# Start of session at: Mon Nov 26 21:10:00 2018
+# Process ID: 9896
+# Current directory: C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10908 C:\Users\tdale19\Desktop\LSTM_Hardware\LSTMpipelined\LSTMpipelined.xpr
+# Log file: C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/vivado.log
+# Journal file: C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 26 22:31:29 2018...
