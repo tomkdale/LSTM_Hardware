@@ -37,13 +37,13 @@ architecture Behavioral of gate is
             output:  out STD_LOGIC_VECTOR(widthM downto 0)
             );
      end component;
-     component sig generic(widthM: integer);
+     component sigGate generic(widthM: integer);
         port(
             input:    in STD_LOGIC_VECTOR(widthM downto 0);
             output:   out STD_LOGIC_VECTOR(widthM downto 0)
             );
         end component;
-     component tanh generic(widthM: integer);
+     component tanhGate generic(widthM: integer);
         port(
             input:    in STD_LOGIC_VECTOR(widthM downto 0);
             output:   out STD_LOGIC_VECTOR(widthM downto 0)
@@ -79,8 +79,8 @@ begin
     
     calcMemCell: addMat generic map(widthM) port map(a=>m1Result,b=>m2Result,output=>sum);
     memOut <= sum;
-    tanhCalc:   tanh generic map(widthM) port map(input=>sum,output=>tanhOut);
-    sigCalc:    sig generic map(widthM) port map(input=>sum, output=>sigOut);
+    tanhCalc:   tanhGate generic map(widthM) port map(input=>sum,output=>tanhOut);
+    sigCalc:    sigGate generic map(widthM) port map(input=>sum, output=>sigOut);
     oOut <= sigOut;
     fOut <= sigOut;
     iOut <= sigOut;

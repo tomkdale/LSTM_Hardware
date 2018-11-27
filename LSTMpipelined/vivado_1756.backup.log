@@ -1,0 +1,333 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.1 (64-bit)
+# SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
+# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+# Start of session at: Tue Nov 27 11:06:56 2018
+# Process ID: 1756
+# Current directory: C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9448 C:\Users\tdale19\Desktop\LSTM_Hardware\LSTMpipelined\LSTMpipelined.xpr
+# Log file: C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/vivado.log
+# Journal file: C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 774.699 ; gain = 50.109
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: LSTMtester
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 938.621 ; gain = 107.746
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'LSTMtester' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtester.vhd:10]
+INFO: [Synth 8-3491] module 'LSTMtop' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:8' bound to instance 'top' of component 'LSTMtop' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtester.vhd:16]
+INFO: [Synth 8-638] synthesizing module 'LSTMtop' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:12]
+	Parameter widthV bound to: 10 - type: integer 
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'gate' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:5' bound to instance 'theGate' of component 'gate' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'gate' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:25]
+	Parameter widthV bound to: 10 - type: integer 
+	Parameter widthM bound to: 100 - type: integer 
+	Parameter widthV bound to: 10 - type: integer 
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'multX' of component 'vectMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:71]
+	Parameter widthV bound to: 10 - type: integer 
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'multH' of component 'vectMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:72]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'multIC' of component 'matMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:74]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'multFC' of component 'matMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:75]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'mux1' of component 'mux' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:77]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'mux2' of component 'mux' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:78]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'calcMemCell' of component 'addMat' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:80]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'tanhCalc' of component 'tanh' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:82]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'sigCalc' of component 'sig' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:83]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'hCalc' of component 'matMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:89]
+INFO: [Synth 8-256] done synthesizing module 'gate' (1#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:25]
+ERROR: [Synth 8-549] port width mismatch for port 'weightX': port width = 11, actual width = 10 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+ERROR: [Synth 8-549] port width mismatch for port 'weightH': port width = 11, actual width = 10 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+ERROR: [Synth 8-549] port width mismatch for port 'oldH': port width = 101, actual width = 100 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+ERROR: [Synth 8-549] port width mismatch for port 'xin': port width = 101, actual width = 100 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+ERROR: [Synth 8-549] port width mismatch for port 'iIn': port width = 101, actual width = 100 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+ERROR: [Synth 8-549] port width mismatch for port 'cmIn': port width = 101, actual width = 100 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+ERROR: [Synth 8-549] port width mismatch for port 'fIn': port width = 101, actual width = 100 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+ERROR: [Synth 8-549] port width mismatch for port 'oIn': port width = 101, actual width = 100 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+ERROR: [Synth 8-549] port width mismatch for port 'memIn': port width = 101, actual width = 100 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+ERROR: [Synth 8-549] port width mismatch for port 'iOut': port width = 101, actual width = 100 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+ERROR: [Synth 8-549] port width mismatch for port 'cOut': port width = 101, actual width = 100 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+ERROR: [Synth 8-549] port width mismatch for port 'fOut': port width = 101, actual width = 100 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+ERROR: [Synth 8-549] port width mismatch for port 'oOut': port width = 101, actual width = 100 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+ERROR: [Synth 8-549] port width mismatch for port 'memOut': port width = 101, actual width = 100 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+ERROR: [Synth 8-549] port width mismatch for port 'hOut': port width = 101, actual width = 100 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+ERROR: [Synth 8-285] failed synthesizing module 'LSTMtop' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:12]
+ERROR: [Synth 8-285] failed synthesizing module 'LSTMtester' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtester.vhd:10]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 993.867 ; gain = 162.992
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+16 Infos, 0 Warnings, 0 Critical Warnings and 18 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: LSTMtester
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 993.867 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'LSTMtester' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtester.vhd:10]
+INFO: [Synth 8-3491] module 'LSTMtop' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:8' bound to instance 'top' of component 'LSTMtop' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtester.vhd:16]
+INFO: [Synth 8-638] synthesizing module 'LSTMtop' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:12]
+	Parameter widthV bound to: 10 - type: integer 
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'gate' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:5' bound to instance 'theGate' of component 'gate' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'gate' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:25]
+	Parameter widthV bound to: 10 - type: integer 
+	Parameter widthM bound to: 100 - type: integer 
+	Parameter widthV bound to: 10 - type: integer 
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'multX' of component 'vectMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:71]
+	Parameter widthV bound to: 10 - type: integer 
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'multH' of component 'vectMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:72]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'multIC' of component 'matMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:74]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'multFC' of component 'matMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:75]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'mux1' of component 'mux' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:77]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'mux2' of component 'mux' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:78]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'calcMemCell' of component 'addMat' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:80]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'tanhCalc' of component 'tanh' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:82]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'sigCalc' of component 'sig' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:83]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'hCalc' of component 'matMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:89]
+INFO: [Synth 8-256] done synthesizing module 'gate' (1#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:25]
+ERROR: [Synth 8-690] width mismatch in assignment; target has 100 bits, source has 101 bits [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:56]
+ERROR: [Synth 8-285] failed synthesizing module 'LSTMtop' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:12]
+ERROR: [Synth 8-285] failed synthesizing module 'LSTMtester' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtester.vhd:10]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 993.867 ; gain = 0.000
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+16 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: LSTMtester
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 993.867 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'LSTMtester' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtester.vhd:10]
+INFO: [Synth 8-3491] module 'LSTMtop' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:8' bound to instance 'top' of component 'LSTMtop' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtester.vhd:16]
+INFO: [Synth 8-638] synthesizing module 'LSTMtop' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:12]
+	Parameter widthV bound to: 10 - type: integer 
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'gate' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:5' bound to instance 'theGate' of component 'gate' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'gate' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:25]
+	Parameter widthV bound to: 10 - type: integer 
+	Parameter widthM bound to: 100 - type: integer 
+	Parameter widthV bound to: 10 - type: integer 
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'multX' of component 'vectMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:71]
+	Parameter widthV bound to: 10 - type: integer 
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'multH' of component 'vectMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:72]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'multIC' of component 'matMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:74]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'multFC' of component 'matMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:75]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'mux1' of component 'mux' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:77]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'mux2' of component 'mux' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:78]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'calcMemCell' of component 'addMat' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:80]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'tanhCalc' of component 'tanh' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:82]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'sigCalc' of component 'sig' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:83]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-637] synthesizing blackbox instance 'hCalc' of component 'matMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:89]
+INFO: [Synth 8-256] done synthesizing module 'gate' (1#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/gate.vhd:25]
+WARNING: [Synth 8-6014] Unused sequential element cHold_reg was removed.  [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:56]
+WARNING: [Synth 8-6014] Unused sequential element iHold_reg was removed.  [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:60]
+WARNING: [Synth 8-6014] Unused sequential element fHold_reg was removed.  [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:64]
+WARNING: [Synth 8-6014] Unused sequential element oHold_reg was removed.  [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:68]
+WARNING: [Synth 8-6014] Unused sequential element memCellHold_reg was removed.  [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:73]
+WARNING: [Synth 8-6014] Unused sequential element hHold_reg was removed.  [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:74]
+WARNING: [Synth 8-3848] Net weightX in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:42]
+WARNING: [Synth 8-3848] Net weightH in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:42]
+WARNING: [Synth 8-3848] Net oldH in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:43]
+WARNING: [Synth 8-3848] Net xin in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:43]
+WARNING: [Synth 8-3848] Net iIn in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:43]
+WARNING: [Synth 8-3848] Net cmIn in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:43]
+WARNING: [Synth 8-3848] Net fIn in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:43]
+WARNING: [Synth 8-3848] Net oIn in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:43]
+WARNING: [Synth 8-3848] Net memIn in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'LSTMtop' (2#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:12]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtester.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'LSTMtester' (3#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtester.vhd:10]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 997.953 ; gain = 4.086
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin theGate:weightX[10] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:weightX[9] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:weightX[8] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:weightX[7] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:weightX[6] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:weightX[5] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:weightX[4] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:weightX[3] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:weightX[2] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:weightX[1] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:weightX[0] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:weightH[10] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:weightH[9] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:weightH[8] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:weightH[7] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:weightH[6] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:weightH[5] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:weightH[4] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:weightH[3] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:weightH[2] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:weightH[1] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:weightH[0] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[100] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[99] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[98] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[97] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[96] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[95] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[94] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[93] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[92] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[91] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[90] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[89] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[88] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[87] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[86] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[85] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[84] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[83] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[82] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[81] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[80] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[79] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[78] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[77] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[76] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[75] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[74] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[73] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[72] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[71] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[70] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[69] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[68] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[67] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[66] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[65] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[64] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[63] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[62] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[61] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[60] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[59] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[58] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[57] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[56] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[55] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[54] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[53] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[52] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[51] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[50] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[49] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[48] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[47] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[46] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[45] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[44] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[43] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[42] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[41] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[40] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[39] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[38] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[37] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[36] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[35] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[34] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[33] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[32] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[31] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[30] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[29] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[28] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[27] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[26] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[25] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[24] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+WARNING: [Synth 8-3295] tying undriven pin theGate:oldH[23] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMpipelined/LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd:46]
+INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 997.953 ; gain = 4.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 997.953 ; gain = 4.086
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 1327.020 ; gain = 333.152
+23 Infos, 116 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 1327.020 ; gain = 333.152
+close_design
+close_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 27 11:35:49 2018...

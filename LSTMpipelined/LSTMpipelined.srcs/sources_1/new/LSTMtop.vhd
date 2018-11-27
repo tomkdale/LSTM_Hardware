@@ -5,8 +5,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 
-entity LSTMtop is
-  Port (clk: in STD_LOGIC ); 
+entity LSTMtop is generic( widthV:integer; widthM: integer);
+  Port (clk: in STD_LOGIC;
+        weightX,weightH: in STD_LOGIC_VECTOR(widthV downto 0);
+        xin: in STD_LOGIC_VECTOR(widthM downto 0);
+        hHold: out STD_LOGIC_VECTOR(widthM downto 0)
+        ); 
 end LSTMtop;
 
 architecture Behavioral of LSTMtop is
@@ -36,14 +40,11 @@ architecture Behavioral of LSTMtop is
               );
     end component;
     
-    constant wV : integer := 10;-- THIS IS WHERE WE DEFINE INPUT SIZE
-    constant wM :integer := 100;
+    
     signal control: STD_LOGIC;
-    signal weightX,weightH: STD_LOGIC_VECTOR(wV downto 0);
-    signal oldH,xin,iIn,cmIn,fIn,oIn,memIn,iOut,cOut,fOut,oOut,memOut,hOut: STD_LOGIC_VECTOR(wM downto 0);
-    signal cHold,iHold,fHold,oHold,memCellHold,hHold: STD_LOGIC_VECTOR(wM downto 0);
+    signal oldH,iIn,cmIn,fIn,oIn,memIn,iOut,cOut,fOut,oOut,memOut,hOut,memCellHold: STD_LOGIC_VECTOR(widthM downto 0);
 begin
-    theGate:    gate generic map(wV,wM) port map(control=>control,weightX=>weightX,weightH=>weightH,oldH=>oldH,xin=>xin,iIn=>iIn,cmIn=>cmIn,fIn=>fIn,oIn=>oIn,memIn=>memIn,iOut=>iOut,cOut=>cOut,fOut=>fOut,oOut=>oOut,memOut=>memOut,hOut=>hOut);
+    theGate:    gate generic map(widthV,widthM) port map(control=>control,weightX=>weightX,weightH=>weightH,oldH=>oldH,xin=>xin,iIn=>iIn,cmIn=>cmIn,fIn=>fIn,oIn=>oIn,memIn=>memIn,iOut=>iOut,cOut=>cOut,fOut=>fOut,oOut=>oOut,memOut=>memOut,hOut=>hOut);
     
     
     --code below practically is the control unit, seperate file not included
@@ -53,19 +54,19 @@ begin
         if rising_edge(clk) then
             if  counter = 1 then
                 control <= '0';
-                cHold <= cOut;
+                cmIn <= cOut;
                 counter:= 2;
             elsif counter = 2 then
                 control <= '0';
-                iHold <= iOut;
+                iIn <= iOut;
                 counter:= 3;
             elsif counter = 3 then
                 control <= '0';
-                fHold <= fOut;
+                fIn <= fOut;
                 counter:= 4;
             elsif counter = 4 then
                 control <= '1';
-                oHold <= oOut;
+                oIn <= oOut;
                 counter:= 5;
             else
                 counter:= 1;
