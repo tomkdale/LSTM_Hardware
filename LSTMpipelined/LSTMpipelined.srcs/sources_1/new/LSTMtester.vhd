@@ -4,7 +4,6 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity LSTMtester is
---  Port ( );
 end LSTMtester;
 
 architecture Behavioral of LSTMtester is

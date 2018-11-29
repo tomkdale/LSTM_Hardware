@@ -1,0 +1,14 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../LSTMpipelined.srcs/sources_1/new/LSTMtop.vhd" \
+"../../../../../LSTMsingle/LSTMsingle.srcs/sources_1/new/addMat.vhd" \
+"../../../../LSTMpipelined.srcs/sources_1/new/gate.vhd" \
+"../../../../../LSTMsingle/LSTMsingle.srcs/sources_1/new/matMatMult.vhd" \
+"../../../../LSTMpipelined.srcs/sources_1/new/mux.vhd" \
+"../../../../../LSTMsingle/LSTMsingle.srcs/sources_1/new/sigGate.vhd" \
+"../../../../../LSTMsingle/LSTMsingle.srcs/sources_1/new/tanhGate.vhd" \
+"../../../../../LSTMsingle/LSTMsingle.srcs/sources_1/new/vectMatMult.vhd" \
+"../../../../LSTMpipelined.srcs/sources_1/new/LSTMtester.vhd" \
+
+# Do not sort compile order
+nosort

@@ -43,7 +43,7 @@ end mux;
 architecture Behavioral of mux is
 
 begin
-    process(choose)
+    process(choose,a,b)
     begin
     if choose = '0' then
         output <= a;

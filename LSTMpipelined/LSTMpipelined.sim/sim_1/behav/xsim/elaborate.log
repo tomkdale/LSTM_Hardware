@@ -1,0 +1,23 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 02bc0f6bae744fb682ca96cc8e08ab51 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot LSTMtester_behav xil_defaultlib.LSTMtester -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.vectMatMult [\vectMatMult(widthv=10,widthm=10...]
+Compiling architecture behavioral of entity xil_defaultlib.matMatMult [\matMatMult(widthm=100)\]
+Compiling architecture behavioral of entity xil_defaultlib.mux [\mux(widthm=100)\]
+Compiling architecture behavioral of entity xil_defaultlib.addMat [\addMat(widthm=100)\]
+Compiling architecture behavioral of entity xil_defaultlib.tanhGate [\tanhGate(widthm=100)\]
+Compiling architecture behavioral of entity xil_defaultlib.sigGate [\sigGate(widthm=100)\]
+Compiling architecture behavioral of entity xil_defaultlib.gate [\gate(widthv=10,widthm=100)\]
+Compiling architecture behavioral of entity xil_defaultlib.LSTMtop [\LSTMtop(widthv=10,widthm=100)\]
+Compiling architecture behavioral of entity xil_defaultlib.lstmtester
+Built simulation snapshot LSTMtester_behav

@@ -42,7 +42,7 @@ architecture Behavioral of LSTMtop is
     
     
     signal control: STD_LOGIC;
-    signal oldH,iIn,cmIn,fIn,oIn,memIn,iOut,cOut,fOut,oOut,memOut,hOut,memCellHold: STD_LOGIC_VECTOR(widthM downto 0);
+    signal oldH,iIn,cmIn,fIn,oIn,memIn,iOut,cOut,fOut,oOut,memOut,hOut: STD_LOGIC_VECTOR(widthM downto 0);
 begin
     theGate:    gate generic map(widthV,widthM) port map(control=>control,weightX=>weightX,weightH=>weightH,oldH=>oldH,xin=>xin,iIn=>iIn,cmIn=>cmIn,fIn=>fIn,oIn=>oIn,memIn=>memIn,iOut=>iOut,cOut=>cOut,fOut=>fOut,oOut=>oOut,memOut=>memOut,hOut=>hOut);
     
@@ -71,7 +71,7 @@ begin
             else
                 counter:= 1;
                 control <= '0';
-                memCellHold <= memOut;
+                memIn <= memOut;
                 hHold <= hOut;--update hHold, the iteration long h value
             end if;
         end if;

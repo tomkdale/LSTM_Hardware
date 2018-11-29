@@ -17,7 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/.Xil/Vivado-10492-LAB-SCI-214-07/incrSyn
+set_param synth.incrementalSynthesisCache C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/.Xil/Vivado-8648-LAB-SCI-214-07/incrSyn
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 set_msg_config -id {Synth 8-256} -limit 10000

@@ -14,147 +14,123 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 4448 
+INFO: Helper process launched with PID 1188 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 356.988 ; gain = 99.625
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 356.988 ; gain = 99.953
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'LSTMtester' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtester.vhd:10]
-	Parameter widthV bound to: 10 - type: integer 
-	Parameter widthM bound to: 100 - type: integer 
+	Parameter widthV bound to: 100 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
 INFO: [Synth 8-3491] module 'LSTMtop' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:8' bound to instance 'top' of component 'LSTMtop' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtester.vhd:25]
 INFO: [Synth 8-638] synthesizing module 'LSTMtop' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:17]
-	Parameter widthV bound to: 10 - type: integer 
-	Parameter widthM bound to: 100 - type: integer 
-	Parameter widthV bound to: 10 - type: integer 
-	Parameter widthM bound to: 100 - type: integer 
-INFO: [Synth 8-3491] module 'elementProcessorSig' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:6' bound to instance 'outputGate' of component 'elementProcessorSig' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:67]
+	Parameter widthV bound to: 100 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
+	Parameter widthV bound to: 100 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'elementProcessorSig' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:6' bound to instance 'outputGate' of component 'elementProcessorSig' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:66]
 INFO: [Synth 8-638] synthesizing module 'elementProcessorSig' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:17]
-	Parameter widthV bound to: 10 - type: integer 
-	Parameter widthM bound to: 100 - type: integer 
-	Parameter widthV bound to: 10 - type: integer 
-	Parameter widthM bound to: 100 - type: integer 
+	Parameter widthV bound to: 100 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
+	Parameter widthV bound to: 100 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
 INFO: [Synth 8-3491] module 'vectMatMult' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/vectMatMult.vhd:7' bound to instance 'multX' of component 'vectMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:40]
 INFO: [Synth 8-638] synthesizing module 'vectMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/vectMatMult.vhd:16]
-	Parameter widthV bound to: 10 - type: integer 
-	Parameter widthM bound to: 100 - type: integer 
+	Parameter widthV bound to: 100 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'vectMatMult' (1#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/vectMatMult.vhd:16]
-	Parameter widthV bound to: 10 - type: integer 
-	Parameter widthM bound to: 100 - type: integer 
+	Parameter widthV bound to: 100 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
 INFO: [Synth 8-3491] module 'vectMatMult' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/vectMatMult.vhd:7' bound to instance 'multH' of component 'vectMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:41]
-	Parameter widthM bound to: 100 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
 INFO: [Synth 8-3491] module 'addMat' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/addMat.vhd:6' bound to instance 'add' of component 'addMat' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:43]
 INFO: [Synth 8-638] synthesizing module 'addMat' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/addMat.vhd:15]
-	Parameter widthM bound to: 100 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'addMat' (2#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/addMat.vhd:15]
-	Parameter widthM bound to: 100 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
 INFO: [Synth 8-3491] module 'sigGate' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/sigGate.vhd:6' bound to instance 'sigmoid' of component 'sigGate' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:44]
 INFO: [Synth 8-638] synthesizing module 'sigGate' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/sigGate.vhd:14]
-	Parameter widthM bound to: 100 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'sigGate' (3#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/sigGate.vhd:14]
 INFO: [Synth 8-256] done synthesizing module 'elementProcessorSig' (4#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:17]
-	Parameter widthV bound to: 10 - type: integer 
-	Parameter widthM bound to: 100 - type: integer 
-INFO: [Synth 8-3491] module 'elementProcessorSig' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:6' bound to instance 'forgetGate' of component 'elementProcessorSig' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:68]
-	Parameter widthV bound to: 10 - type: integer 
-	Parameter widthM bound to: 100 - type: integer 
-INFO: [Synth 8-3491] module 'elementProcessorSig' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:6' bound to instance 'inputGate' of component 'elementProcessorSig' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:69]
-	Parameter widthV bound to: 10 - type: integer 
-	Parameter widthM bound to: 100 - type: integer 
-INFO: [Synth 8-3491] module 'elementProcessorTanh' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorTanh.vhd:6' bound to instance 'memoryCanditateGate' of component 'elementProcessorTanh' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:70]
+	Parameter widthV bound to: 100 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'elementProcessorSig' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:6' bound to instance 'forgetGate' of component 'elementProcessorSig' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:67]
+	Parameter widthV bound to: 100 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'elementProcessorSig' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:6' bound to instance 'inputGate' of component 'elementProcessorSig' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:68]
+	Parameter widthV bound to: 100 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'elementProcessorTanh' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorTanh.vhd:6' bound to instance 'memoryCanditateGate' of component 'elementProcessorTanh' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:69]
 INFO: [Synth 8-638] synthesizing module 'elementProcessorTanh' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorTanh.vhd:18]
-	Parameter widthV bound to: 10 - type: integer 
-	Parameter widthM bound to: 100 - type: integer 
-	Parameter widthV bound to: 10 - type: integer 
-	Parameter widthM bound to: 100 - type: integer 
+	Parameter widthV bound to: 100 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
+	Parameter widthV bound to: 100 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
 INFO: [Synth 8-3491] module 'vectMatMult' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/vectMatMult.vhd:7' bound to instance 'multX' of component 'vectMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorTanh.vhd:41]
-	Parameter widthV bound to: 10 - type: integer 
-	Parameter widthM bound to: 100 - type: integer 
+	Parameter widthV bound to: 100 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
 INFO: [Synth 8-3491] module 'vectMatMult' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/vectMatMult.vhd:7' bound to instance 'multH' of component 'vectMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorTanh.vhd:42]
-	Parameter widthM bound to: 100 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
 INFO: [Synth 8-3491] module 'addMat' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/addMat.vhd:6' bound to instance 'add' of component 'addMat' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorTanh.vhd:44]
-	Parameter widthM bound to: 100 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
 INFO: [Synth 8-3491] module 'tanhGate' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/tanhGate.vhd:4' bound to instance 'tanh' of component 'tanhGate' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorTanh.vhd:45]
 INFO: [Synth 8-638] synthesizing module 'tanhGate' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/tanhGate.vhd:12]
-	Parameter widthM bound to: 100 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'tanhGate' (5#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/tanhGate.vhd:12]
 INFO: [Synth 8-256] done synthesizing module 'elementProcessorTanh' (6#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorTanh.vhd:18]
-	Parameter widthM bound to: 100 - type: integer 
-INFO: [Synth 8-3491] module 'matMatMult' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/matMatMult.vhd:6' bound to instance 'inputeTimesCandidate' of component 'matMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:72]
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'matMatMult' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/matMatMult.vhd:6' bound to instance 'inputeTimesCandidate' of component 'matMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:71]
 INFO: [Synth 8-638] synthesizing module 'matMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/matMatMult.vhd:15]
-	Parameter widthM bound to: 100 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'matMatMult' (7#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/matMatMult.vhd:15]
-	Parameter widthM bound to: 100 - type: integer 
-INFO: [Synth 8-3491] module 'matMatMult' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/matMatMult.vhd:6' bound to instance 'forgetTimesMemory' of component 'matMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:73]
-	Parameter widthM bound to: 100 - type: integer 
-INFO: [Synth 8-3491] module 'addMat' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/addMat.vhd:6' bound to instance 'calcMemCell' of component 'addMat' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:74]
-	Parameter widthM bound to: 100 - type: integer 
-INFO: [Synth 8-3491] module 'tanhGate' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/tanhGate.vhd:4' bound to instance 'tanhCalc' of component 'tanhGate' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:75]
-	Parameter widthM bound to: 100 - type: integer 
-INFO: [Synth 8-3491] module 'matMatMult' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/matMatMult.vhd:6' bound to instance 'getResult' of component 'matMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:76]
-WARNING: [Synth 8-3848] Net weightXO in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:63]
-WARNING: [Synth 8-3848] Net weightHO in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:63]
-WARNING: [Synth 8-3848] Net hOld in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:61]
-WARNING: [Synth 8-3848] Net oldmemoryCell in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:64]
-WARNING: [Synth 8-3848] Net weightXF in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:63]
-WARNING: [Synth 8-3848] Net weightHF in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:63]
-WARNING: [Synth 8-3848] Net weightXI in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:63]
-WARNING: [Synth 8-3848] Net weightHI in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:63]
-WARNING: [Synth 8-3848] Net weightXC in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:63]
-WARNING: [Synth 8-3848] Net weightHC in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:63]
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'matMatMult' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/matMatMult.vhd:6' bound to instance 'forgetTimesMemory' of component 'matMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:72]
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'addMat' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/addMat.vhd:6' bound to instance 'calcMemCell' of component 'addMat' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:73]
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'tanhGate' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/tanhGate.vhd:4' bound to instance 'tanhCalc' of component 'tanhGate' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:74]
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'matMatMult' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/matMatMult.vhd:6' bound to instance 'getResult' of component 'matMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:75]
+WARNING: [Synth 8-614] signal 'hNew' is read in the process but is not in the sensitivity list [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:77]
+WARNING: [Synth 8-3848] Net oldmemoryCell in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:63]
 INFO: [Synth 8-256] done synthesizing module 'LSTMtop' (8#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:17]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtester.vhd:29]
-WARNING: [Synth 8-3848] Net weightX in module/entity LSTMtester does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtester.vhd:22]
-WARNING: [Synth 8-3848] Net weightH in module/entity LSTMtester does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtester.vhd:22]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtester.vhd:30]
+WARNING: [Synth 8-3848] Net weightXO in module/entity LSTMtester does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtester.vhd:22]
+WARNING: [Synth 8-3848] Net weightHO in module/entity LSTMtester does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtester.vhd:22]
+WARNING: [Synth 8-3848] Net weightXF in module/entity LSTMtester does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtester.vhd:22]
+WARNING: [Synth 8-3848] Net weightHF in module/entity LSTMtester does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtester.vhd:22]
+WARNING: [Synth 8-3848] Net weightXI in module/entity LSTMtester does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtester.vhd:22]
+WARNING: [Synth 8-3848] Net weightHI in module/entity LSTMtester does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtester.vhd:22]
+WARNING: [Synth 8-3848] Net weightXC in module/entity LSTMtester does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtester.vhd:22]
+WARNING: [Synth 8-3848] Net weightHC in module/entity LSTMtester does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtester.vhd:22]
 WARNING: [Synth 8-3848] Net xin in module/entity LSTMtester does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtester.vhd:23]
 INFO: [Synth 8-256] done synthesizing module 'LSTMtester' (9#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtester.vhd:10]
 WARNING: [Synth 8-3331] design LSTMtop has unconnected port clk
-WARNING: [Synth 8-3331] design LSTMtop has unconnected port weightX[10]
-WARNING: [Synth 8-3331] design LSTMtop has unconnected port weightX[9]
-WARNING: [Synth 8-3331] design LSTMtop has unconnected port weightX[8]
-WARNING: [Synth 8-3331] design LSTMtop has unconnected port weightX[7]
-WARNING: [Synth 8-3331] design LSTMtop has unconnected port weightX[6]
-WARNING: [Synth 8-3331] design LSTMtop has unconnected port weightX[5]
-WARNING: [Synth 8-3331] design LSTMtop has unconnected port weightX[4]
-WARNING: [Synth 8-3331] design LSTMtop has unconnected port weightX[3]
-WARNING: [Synth 8-3331] design LSTMtop has unconnected port weightX[2]
-WARNING: [Synth 8-3331] design LSTMtop has unconnected port weightX[1]
-WARNING: [Synth 8-3331] design LSTMtop has unconnected port weightX[0]
-WARNING: [Synth 8-3331] design LSTMtop has unconnected port weightH[10]
-WARNING: [Synth 8-3331] design LSTMtop has unconnected port weightH[9]
-WARNING: [Synth 8-3331] design LSTMtop has unconnected port weightH[8]
-WARNING: [Synth 8-3331] design LSTMtop has unconnected port weightH[7]
-WARNING: [Synth 8-3331] design LSTMtop has unconnected port weightH[6]
-WARNING: [Synth 8-3331] design LSTMtop has unconnected port weightH[5]
-WARNING: [Synth 8-3331] design LSTMtop has unconnected port weightH[4]
-WARNING: [Synth 8-3331] design LSTMtop has unconnected port weightH[3]
-WARNING: [Synth 8-3331] design LSTMtop has unconnected port weightH[2]
-WARNING: [Synth 8-3331] design LSTMtop has unconnected port weightH[1]
-WARNING: [Synth 8-3331] design LSTMtop has unconnected port weightH[0]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 411.949 ; gain = 154.586
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 462.195 ; gain = 205.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 411.949 ; gain = 154.586
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 462.195 ; gain = 205.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 411.949 ; gain = 154.586
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 462.195 ; gain = 205.160
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 411.949 ; gain = 154.586
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 496.484 ; gain = 239.449
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-223] decloning instance 'top/outputGate' (elementProcessorSig) to 'top/forgetGate'
-INFO: [Synth 8-223] decloning instance 'top/outputGate' (elementProcessorSig) to 'top/inputGate'
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |LSTMtop__GB0  |           1|     60612|
+|2     |LSTMtop__GB1  |           1|     20204|
++------+--------------+------------+----------+
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -185,7 +161,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 542.887 ; gain = 285.523
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 774.492 ; gain = 517.457
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -198,7 +174,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 542.887 ; gain = 285.523
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 774.492 ; gain = 517.457
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -210,7 +186,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 542.887 ; gain = 285.523
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 774.492 ; gain = 517.457
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -234,7 +210,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 542.887 ; gain = 285.523
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 774.492 ; gain = 517.457
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -247,7 +223,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 542.887 ; gain = 285.523
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 774.492 ; gain = 517.457
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -259,25 +235,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 542.887 ; gain = 285.523
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 774.492 ; gain = 517.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 542.887 ; gain = 285.523
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 774.492 ; gain = 517.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 542.887 ; gain = 285.523
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 774.492 ; gain = 517.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 542.887 ; gain = 285.523
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 774.492 ; gain = 517.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -302,11 +278,11 @@ Report Instance Areas:
 |1     |top      |       |     0|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 542.887 ; gain = 285.523
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 774.492 ; gain = 517.457
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 37 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 542.887 ; gain = 285.523
-Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 542.887 ; gain = 285.523
+Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 774.492 ; gain = 517.457
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 774.492 ; gain = 517.457
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -314,11 +290,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-45 Infos, 37 Warnings, 0 Critical Warnings and 0 Errors encountered.
+43 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 661.449 ; gain = 416.906
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:25 . Memory (MB): peak = 774.492 ; gain = 529.957
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.runs/synth_1/LSTMtester.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file LSTMtester_utilization_synth.rpt -pb LSTMtester_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 661.449 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Nov 27 15:40:59 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 774.492 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 28 16:20:13 2018...

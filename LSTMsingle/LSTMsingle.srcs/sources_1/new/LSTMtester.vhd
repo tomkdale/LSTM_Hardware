@@ -11,7 +11,7 @@ architecture Behavioral of LSTMtester is
     component LSTMtop is
         generic(widthV: integer; widthM:integer);
         Port(clk: in STD_LOGIC;
-            weightX,weightH: in STD_LOGIC_VECTOR(widthV downto 0);
+            weightXO,weightHO,weightXF,weightHF,weightXI,weightHI,weightXC,weightHC: in STD_LOGIC_VECTOR(widthV downto 0);
             xin: in STD_LOGIC_VECTOR(widthM downto 0);
             h: out STD_LOGIC_VECTOR(widthM downto 0)
         );
@@ -19,10 +19,11 @@ architecture Behavioral of LSTMtester is
     constant wV : integer := 10;-- THIS IS WHERE WE DEFINE INPUT SIZE
     constant wM :integer := 100;
     signal clk:STD_LOGIC;
-    signal weightX,weightH: STD_LOGIC_VECTOR(wV downto 0);--to actually be run weights would be updated dynamically
+    signal weightXO,weightHO,weightXF,weightHF,weightXI,weightHI,weightXC,weightHC: STD_LOGIC_VECTOR(wV downto 0);--to actually be run weights would be updated dynamically
     signal xin,hOut:    STD_LOGIC_VECTOR(wM downto 0);
 begin
-    top: LSTMtop generic map(wV,wM) port map(clk=>clk,weightX=>weightX,weightH=>weightH,xin=>xin,h=>hOut);
+    top: LSTMtop generic map(wV,wM) port map(clk=>clk,weightXO=>weightXO,weightHO=>weightHO,weightXF=>weightXF,weightHF=>weightHF,
+    weightXI=>weightXI,weightHI=>weightHI,weightXC=>weightXC,weightHC=>weightHC,xin=>xin,h=>hOut);
     
     process begin
         clk <= '1';

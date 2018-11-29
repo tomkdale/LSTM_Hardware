@@ -8,7 +8,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity LSTMtop is
         generic(widthV: integer; widthM:integer);
         Port(clk: in STD_LOGIC;
-            weightX,weightH: in STD_LOGIC_VECTOR(widthV downto 0);
+            weightXO,weightHO,weightXF,weightHF,weightXI,weightHI,weightXC,weightHC: in STD_LOGIC_VECTOR(widthV downto 0);
             xin: in STD_LOGIC_VECTOR(widthM downto 0);
             h: out STD_LOGIC_VECTOR(widthM downto 0)
        );
@@ -58,9 +58,8 @@ architecture Behavioral of LSTMtop is
             output:   out STD_LOGIC_VECTOR(widthM downto 0)
             );
     end component;
-    signal hOld: STD_LOGIC_VECTOR(widthM downto 0);--final output from this iteration
+    signal hOld,hNew: STD_LOGIC_VECTOR(widthM downto 0);--final output from this iteration
     signal outputResult,forgetResult,inputResult,memoryCandidateResult : STD_LOGIC_VECTOR(widthM downto 0);--results of gates
-    signal weightXO,weightHO,weightXF,weightHF,weightXI,weightHI,weightXC,weightHC: STD_LOGIC_VECTOR(widthV downto 0);--weights
     signal inputPrime,forgetPrime,oldmemoryCell,newidthMemoryCell,tanhResult:STD_LOGIC_VECTOR(widthM downto 0);--intermediate wires in forget and memory calculations
 begin
     --TODO first loop needs null values for hOld and oldMemoryCell
@@ -73,9 +72,13 @@ begin
     forgetTimesMemory:  matMatMult generic map(widthM) port map(mat1=>oldMemoryCell,mat2=>forgetResult,output=>forgetPrime);
     calcMemCell: addMat generic map(widthM) port map(a=>forgetPrime,b=>inputPrime,output=>newidthMemoryCell);
     tanhCalc: tanhGate generic map(widthM) port map(input=>newidthMemoryCell,output=>tanhResult);
-    getResult: matMatMult generic map(widthM) port map(mat1=> outputResult, mat2=>tanhResult,output=>h);
+    getResult: matMatMult generic map(widthM) port map(mat1=> outputResult, mat2=>tanhResult,output=>hNew);
     
-    
+    process(clk)
+    begin
+        h<=hNew;
+        hOld<=hNew;
+    end process;
     
 
 end Behavioral;

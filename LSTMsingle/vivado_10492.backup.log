@@ -1,0 +1,547 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.1 (64-bit)
+# SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
+# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+# Start of session at: Tue Nov 27 14:49:47 2018
+# Process ID: 10492
+# Current directory: C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10288 C:\Users\tdale19\Desktop\LSTM_Hardware\LSTMsingle\LSTMsingle.xpr
+# Log file: C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/vivado.log
+# Journal file: C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: LSTMtester
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 931.742 ; gain = 100.648
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'LSTMtester' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtester.vhd:10]
+INFO: [Synth 8-3491] module 'LSTMtop' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:8' bound to instance 'top' of component 'LSTMtop' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtester.vhd:16]
+INFO: [Synth 8-638] synthesizing module 'LSTMtop' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:12]
+	Parameter widthV bound to: 10 - type: integer 
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'elementProcessorSig' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:6' bound to instance 'outputGate' of component 'elementProcessorSig' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'elementProcessorSig' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:17]
+	Parameter widthV bound to: 10 - type: integer 
+	Parameter widthM bound to: 100 - type: integer 
+	Parameter widthV bound to: 10 - type: integer 
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'vectMatMult' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/vectMatMult.vhd:7' bound to instance 'multX' of component 'vectMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'vectMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/vectMatMult.vhd:16]
+	Parameter widthV bound to: 10 - type: integer 
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'vectMatMult' (1#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/vectMatMult.vhd:16]
+	Parameter widthV bound to: 10 - type: integer 
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'vectMatMult' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/vectMatMult.vhd:7' bound to instance 'multH' of component 'vectMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:41]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'addMat' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/addMat.vhd:6' bound to instance 'add' of component 'addMat' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:43]
+INFO: [Synth 8-638] synthesizing module 'addMat' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/addMat.vhd:15]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'addMat' (2#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/addMat.vhd:15]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'sigGate' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/sigGate.vhd:6' bound to instance 'sigmoid' of component 'sigGate' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:44]
+INFO: [Synth 8-638] synthesizing module 'sigGate' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/sigGate.vhd:14]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'sigGate' (3#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/sigGate.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'elementProcessorSig' (4#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:17]
+	Parameter widthV bound to: 10 - type: integer 
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'elementProcessorSig' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:6' bound to instance 'forgetGate' of component 'elementProcessorSig' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:66]
+	Parameter widthV bound to: 10 - type: integer 
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'elementProcessorSig' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:6' bound to instance 'inputGate' of component 'elementProcessorSig' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:67]
+	Parameter widthV bound to: 10 - type: integer 
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'elementProcessorTanh' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorTanh.vhd:6' bound to instance 'memoryCanditateGate' of component 'elementProcessorTanh' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'elementProcessorTanh' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorTanh.vhd:18]
+	Parameter widthV bound to: 10 - type: integer 
+	Parameter widthM bound to: 100 - type: integer 
+	Parameter widthV bound to: 10 - type: integer 
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'vectMatMult' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/vectMatMult.vhd:7' bound to instance 'multX' of component 'vectMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorTanh.vhd:41]
+	Parameter widthV bound to: 10 - type: integer 
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'vectMatMult' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/vectMatMult.vhd:7' bound to instance 'multH' of component 'vectMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorTanh.vhd:42]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'addMat' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/addMat.vhd:6' bound to instance 'add' of component 'addMat' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorTanh.vhd:44]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'tanhGate' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/tanhGate.vhd:4' bound to instance 'tanh' of component 'tanhGate' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorTanh.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'tanhGate' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/tanhGate.vhd:12]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'tanhGate' (5#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/tanhGate.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'elementProcessorTanh' (6#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorTanh.vhd:18]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'matMatMult' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/matMatMult.vhd:6' bound to instance 'inputeTimesCandidate' of component 'matMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'matMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/matMatMult.vhd:15]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'matMatMult' (7#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/matMatMult.vhd:15]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'matMatMult' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/matMatMult.vhd:6' bound to instance 'forgetTimesMemory' of component 'matMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:71]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'addMat' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/addMat.vhd:6' bound to instance 'calcMemCell' of component 'addMat' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:72]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'tanhGate' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/tanhGate.vhd:4' bound to instance 'tanhCalc' of component 'tanhGate' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:73]
+	Parameter widthM bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'matMatMult' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/matMatMult.vhd:6' bound to instance 'getResult' of component 'matMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:74]
+	Parameter width bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'flipFlop' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/flipFlop.vhd:6' bound to instance 'newCyle' of component 'flipFlop' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'flipFlop' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/flipFlop.vhd:13]
+	Parameter width bound to: 100 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'flipFlop' (8#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/flipFlop.vhd:13]
+WARNING: [Synth 8-3848] Net x in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:58]
+WARNING: [Synth 8-3848] Net weightXO in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:61]
+WARNING: [Synth 8-3848] Net weightHO in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:61]
+WARNING: [Synth 8-3848] Net weightXF in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:61]
+WARNING: [Synth 8-3848] Net weightHF in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:61]
+WARNING: [Synth 8-3848] Net weightXI in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:61]
+WARNING: [Synth 8-3848] Net weightHI in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:61]
+WARNING: [Synth 8-3848] Net weightXC in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:61]
+WARNING: [Synth 8-3848] Net weightHC in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:61]
+WARNING: [Synth 8-3848] Net oldmemoryCell in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:62]
+INFO: [Synth 8-256] done synthesizing module 'LSTMtop' (9#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:12]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtester.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'LSTMtester' (10#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtester.vhd:10]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 951.773 ; gain = 120.680
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[10] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[9] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[8] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[7] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[6] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[5] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[4] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[3] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[2] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[1] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[0] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightH[10] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightH[9] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightH[8] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightH[7] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightH[6] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightH[5] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightH[4] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightH[3] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightH[2] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightH[1] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightH[0] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[100] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[99] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[98] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[97] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[96] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[95] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[94] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[93] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[92] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[91] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[90] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[89] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[88] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[87] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[86] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[85] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[84] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[83] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[82] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[81] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[80] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[79] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[78] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[77] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[76] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[75] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[74] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[73] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[72] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[71] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[70] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[69] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[68] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[67] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[66] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[65] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[64] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[63] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[62] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[61] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[60] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[59] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[58] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[57] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[56] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[55] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[54] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[53] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[52] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[51] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[50] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[49] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[48] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[47] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[46] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[45] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[44] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[43] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[42] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[41] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[40] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[39] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[38] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[37] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[36] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[35] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[34] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[33] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[32] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[31] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[30] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[29] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[28] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[27] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[26] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[25] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[24] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:xin[23] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 951.773 ; gain = 120.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 951.773 ; gain = 120.680
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:16 . Memory (MB): peak = 1334.910 ; gain = 503.816
+44 Infos, 111 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:16 . Memory (MB): peak = 1334.910 ; gain = 503.816
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Tue Nov 27 15:11:49 2018] Launched synth_1...
+Run output will be captured here: C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+report_power -name {power_1}
+Command: report_power -name power_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Power 33-232] No user defined clocks were found in the design!
+Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+1 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1802.117 ; gain = 378.379
+report_methodology -name ultrafast_methodology_1 -checks {PDRC-204 PDRC-190 TIMING-43 TIMING-42 TIMING-41 TIMING-40 TIMING-39 TIMING-38 TIMING-37 TIMING-36 TIMING-35 TIMING-34 TIMING-33 TIMING-32 TIMING-31 TIMING-30 TIMING-29 TIMING-28 TIMING-27 TIMING-26 TIMING-25 TIMING-24 TIMING-23 TIMING-22 TIMING-21 TIMING-20 TIMING-19 TIMING-18 TIMING-17 TIMING-16 TIMING-15 TIMING-14 TIMING-13 TIMING-12 TIMING-11 TIMING-10 TIMING-9 TIMING-8 TIMING-7 TIMING-6 TIMING-5 TIMING-4 TIMING-3 TIMING-2 TIMING-1 XDCV-2 XDCV-1 XDCH-2 XDCH-1 XDCC-8 XDCC-7 XDCC-6 XDCC-5 XDCC-4 XDCC-3 XDCC-2 XDCC-1 XDCB-5 XDCB-4 XDCB-3 XDCB-2 XDCB-1 CLKC-54 CLKC-53 CLKC-9 CLKC-5 CLKC-38 CLKC-37 CLKC-36 CLKC-35 CLKC-4 CLKC-18 CLKC-3 CLKC-2 CLKC-1 HPDR-1 DPIR-1 SYNTH-14 SYNTH-13 SYNTH-12 SYNTH-11 SYNTH-10 SYNTH-9 SYNTH-16 SYNTH-15 SYNTH-6 SYNTH-5 SYNTH-4}
+Command: report_methodology -name ultrafast_methodology_1 -checks {PDRC-204 PDRC-190 TIMING-43 TIMING-42 TIMING-41 TIMING-40 TIMING-39 TIMING-38 TIMING-37 TIMING-36 TIMING-35 TIMING-34 TIMING-33 TIMING-32 TIMING-31 TIMING-30 TIMING-29 TIMING-28 TIMING-27 TIMING-26 TIMING-25 TIMING-24 TIMING-23 TIMING-22 TIMING-21 TIMING-20 TIMING-19 TIMING-18 TIMING-17 TIMING-16 TIMING-15 TIMING-14 TIMING-13 TIMING-12 TIMING-11 TIMING-10 TIMING-9 TIMING-8 TIMING-7 TIMING-6 TIMING-5 TIMING-4 TIMING-3 TIMING-2 TIMING-1 XDCV-2 XDCV-1 XDCH-2 XDCH-1 XDCC-8 XDCC-7 XDCC-6 XDCC-5 XDCC-4 XDCC-3 XDCC-2 XDCC-1 XDCB-5 XDCB-4 XDCB-3 XDCB-2 XDCB-1 CLKC-54 CLKC-53 CLKC-9 CLKC-5 CLKC-38 CLKC-37 CLKC-36 CLKC-35 CLKC-4 CLKC-18 CLKC-3 CLKC-2 CLKC-1 HPDR-1 DPIR-1 SYNTH-14 SYNTH-13 SYNTH-12 SYNTH-11 SYNTH-10 SYNTH-9 SYNTH-16 SYNTH-15 SYNTH-6 SYNTH-5 SYNTH-4}
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+report_methodology completed successfully
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: LSTMtester
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1875.359 ; gain = 37.477
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'LSTMtester' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtester.vhd:10]
+INFO: [Synth 8-3491] module 'LSTMtop' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:8' bound to instance 'top' of component 'LSTMtop' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtester.vhd:16]
+INFO: [Synth 8-638] synthesizing module 'LSTMtop' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:12]
+	Parameter widthV bound to: 1000 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'elementProcessorSig' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:6' bound to instance 'outputGate' of component 'elementProcessorSig' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'elementProcessorSig' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:17]
+	Parameter widthV bound to: 1000 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
+	Parameter widthV bound to: 1000 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'vectMatMult' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/vectMatMult.vhd:7' bound to instance 'multX' of component 'vectMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'vectMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/vectMatMult.vhd:16]
+	Parameter widthV bound to: 1000 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'vectMatMult' (1#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/vectMatMult.vhd:16]
+	Parameter widthV bound to: 1000 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'vectMatMult' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/vectMatMult.vhd:7' bound to instance 'multH' of component 'vectMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:41]
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'addMat' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/addMat.vhd:6' bound to instance 'add' of component 'addMat' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:43]
+INFO: [Synth 8-638] synthesizing module 'addMat' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/addMat.vhd:15]
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'addMat' (2#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/addMat.vhd:15]
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'sigGate' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/sigGate.vhd:6' bound to instance 'sigmoid' of component 'sigGate' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:44]
+INFO: [Synth 8-638] synthesizing module 'sigGate' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/sigGate.vhd:14]
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'sigGate' (3#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/sigGate.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'elementProcessorSig' (4#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:17]
+	Parameter widthV bound to: 1000 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'elementProcessorSig' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:6' bound to instance 'forgetGate' of component 'elementProcessorSig' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:66]
+	Parameter widthV bound to: 1000 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'elementProcessorSig' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorSig.vhd:6' bound to instance 'inputGate' of component 'elementProcessorSig' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:67]
+	Parameter widthV bound to: 1000 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'elementProcessorTanh' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorTanh.vhd:6' bound to instance 'memoryCanditateGate' of component 'elementProcessorTanh' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'elementProcessorTanh' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorTanh.vhd:18]
+	Parameter widthV bound to: 1000 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
+	Parameter widthV bound to: 1000 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'vectMatMult' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/vectMatMult.vhd:7' bound to instance 'multX' of component 'vectMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorTanh.vhd:41]
+	Parameter widthV bound to: 1000 - type: integer 
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'vectMatMult' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/vectMatMult.vhd:7' bound to instance 'multH' of component 'vectMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorTanh.vhd:42]
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'addMat' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/addMat.vhd:6' bound to instance 'add' of component 'addMat' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorTanh.vhd:44]
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'tanhGate' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/tanhGate.vhd:4' bound to instance 'tanh' of component 'tanhGate' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorTanh.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'tanhGate' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/tanhGate.vhd:12]
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'tanhGate' (5#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/tanhGate.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'elementProcessorTanh' (6#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/elementProcessorTanh.vhd:18]
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'matMatMult' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/matMatMult.vhd:6' bound to instance 'inputeTimesCandidate' of component 'matMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'matMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/matMatMult.vhd:15]
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'matMatMult' (7#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/matMatMult.vhd:15]
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'matMatMult' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/matMatMult.vhd:6' bound to instance 'forgetTimesMemory' of component 'matMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:71]
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'addMat' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/addMat.vhd:6' bound to instance 'calcMemCell' of component 'addMat' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:72]
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'tanhGate' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/tanhGate.vhd:4' bound to instance 'tanhCalc' of component 'tanhGate' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:73]
+	Parameter widthM bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'matMatMult' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/matMatMult.vhd:6' bound to instance 'getResult' of component 'matMatMult' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:74]
+	Parameter width bound to: 10000 - type: integer 
+INFO: [Synth 8-3491] module 'flipFlop' declared at 'C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/flipFlop.vhd:6' bound to instance 'newCyle' of component 'flipFlop' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'flipFlop' [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/flipFlop.vhd:13]
+	Parameter width bound to: 10000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'flipFlop' (8#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/flipFlop.vhd:13]
+WARNING: [Synth 8-3848] Net x in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:58]
+WARNING: [Synth 8-3848] Net weightXO in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:61]
+WARNING: [Synth 8-3848] Net weightHO in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:61]
+WARNING: [Synth 8-3848] Net weightXF in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:61]
+WARNING: [Synth 8-3848] Net weightHF in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:61]
+WARNING: [Synth 8-3848] Net weightXI in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:61]
+WARNING: [Synth 8-3848] Net weightHI in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:61]
+WARNING: [Synth 8-3848] Net weightXC in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:61]
+WARNING: [Synth 8-3848] Net weightHC in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:61]
+WARNING: [Synth 8-3848] Net oldmemoryCell in module/entity LSTMtop does not have driver. [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:62]
+INFO: [Synth 8-256] done synthesizing module 'LSTMtop' (9#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:12]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtester.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'LSTMtester' (10#1) [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtester.vhd:10]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1979.215 ; gain = 141.332
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[1000] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[999] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[998] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[997] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[996] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[995] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[994] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[993] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[992] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[991] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[990] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[989] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[988] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[987] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[986] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[985] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[984] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[983] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[982] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[981] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[980] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[979] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[978] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[977] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[976] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[975] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[974] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[973] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[972] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[971] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[970] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[969] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[968] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[967] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[966] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[965] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[964] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[963] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[962] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[961] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[960] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[959] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[958] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[957] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[956] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[955] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[954] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[953] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[952] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[951] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[950] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[949] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[948] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[947] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[946] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[945] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[944] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[943] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[942] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[941] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[940] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[939] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[938] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[937] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[936] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[935] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[934] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[933] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[932] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[931] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[930] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[929] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[928] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[927] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[926] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[925] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[924] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[923] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[922] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[921] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[920] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[919] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[918] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[917] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[916] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[915] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[914] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[913] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[912] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[911] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[910] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[909] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[908] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[907] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[906] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[905] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[904] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[903] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[902] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+WARNING: [Synth 8-3295] tying undriven pin outputGate:weightX[901] to constant 0 [C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/new/LSTMtop.vhd:65]
+INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1979.215 ; gain = 141.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1979.215 ; gain = 141.332
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:34 ; elapsed = 00:00:28 . Memory (MB): peak = 2473.828 ; gain = 635.945
+43 Infos, 111 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:28 . Memory (MB): peak = 2473.828 ; gain = 635.945
+report_methodology -name ultrafast_methodology_1 -checks {XDCH-2 XDCH-1 XDCC-8 XDCC-7 XDCC-6 XDCC-5 XDCC-4 XDCC-3 XDCC-2 XDCC-1 XDCB-5 XDCB-4 XDCB-3 XDCB-2 XDCB-1 CLKC-54 CLKC-53 CLKC-9 CLKC-5 CLKC-38 CLKC-37 CLKC-36 CLKC-35 CLKC-4 CLKC-18 CLKC-3 CLKC-2 CLKC-1 HPDR-1 RRRS-1 RROR-1 ROAS-1 RMOR-1 RMIR-1 RFTL-1 RFRC-1 RFRA-1 RFFI-1 RFFH-1 RFCF-1 RCCL-1 RCBG-1 RAMP-1 RAMF-1 RAMD-1 RAKN-1}
+Command: report_methodology -name ultrafast_methodology_1 -checks {XDCH-2 XDCH-1 XDCC-8 XDCC-7 XDCC-6 XDCC-5 XDCC-4 XDCC-3 XDCC-2 XDCC-1 XDCB-5 XDCB-4 XDCB-3 XDCB-2 XDCB-1 CLKC-54 CLKC-53 CLKC-9 CLKC-5 CLKC-38 CLKC-37 CLKC-36 CLKC-35 CLKC-4 CLKC-18 CLKC-3 CLKC-2 CLKC-1 HPDR-1 RRRS-1 RROR-1 ROAS-1 RMOR-1 RMIR-1 RFTL-1 RFRC-1 RFRA-1 RFFI-1 RFFH-1 RFCF-1 RCCL-1 RCBG-1 RAMP-1 RAMF-1 RAMD-1 RAKN-1}
+INFO: [Timing 38-253] The multi-corner and the min_max analysis have been enable for the timing DRC
+INFO: [DRC 23-133] Running Methodology with 2 threads
+report_methodology completed successfully
+create_bd_design "design_1"
+Wrote  : <C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/bd/design_1/design_1.bd> 
+create_bd_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2543.539 ; gain = 48.355
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:fir_compiler:7.2 fir_compiler_0
+endgroup
+delete_bd_objs [get_bd_cells fir_compiler_0]
+update_compile_order -fileset sources_1
+save_bd_design
+Wrote  : <C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Tue Nov 27 15:39:44 2018] Launched synth_1...
+Run output will be captured here: C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Tue Nov 27 15:40:38 2018] Launched synth_1...
+Run output will be captured here: C:/Users/tdale19/Desktop/LSTM_Hardware/LSTMsingle/LSTMsingle.runs/synth_1/runme.log
+current_design synth_1
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 27 15:41:44 2018...
